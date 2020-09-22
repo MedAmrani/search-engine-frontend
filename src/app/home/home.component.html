@@ -1,0 +1,37 @@
+<div class="home">
+    <div class="home__header">
+        <div class="home__headerLeft">
+            <a  href="#" target="_blank">About</a>
+
+
+        </div>
+        <div class="home__headerRight">
+            <a routerLink="/upload">Upload</a>
+            <mat-icon aria-hidden="false" >apps</mat-icon>
+            <button mat-button [matMenuTriggerFor]="menu">
+                <mat-icon class="avatar" aria-hidden="false" >account_circle</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Disconnect</button>
+                </mat-menu>
+            <!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+            <mat-menu #menu="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+            </mat-menu> -->
+
+            <!-- <mat-icon class="avatar" aria-hidden="false" >account_circle</mat-icon> -->
+                        
+        </div>
+    </div>
+    <div class="home__body">
+        <img src="../../assets/mednour.PNG"/>
+        <div class="home__inputContainer">
+            <app-search [isButtonVisible]="true" (searchValue)="onSearchEvent($event)"></app-search>
+
+        </div>
+    </div>
+    
+</div>
+

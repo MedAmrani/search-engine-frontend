@@ -1,0 +1,58 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.home__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+}
+
+
+.home__header a {
+    margin-right: 20px;
+    text-decoration: inherit;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 15px;
+}
+.home__header a:hover {
+    text-decoration: underline;
+}
+
+.home__headerRight {
+    display: flex;
+    align-items: center;
+    min-width: 13vw;
+    justify-content: space-between;
+}
+
+.home__headerRight > .mat-icon {
+    margin-right: 20px;
+}
+
+.avatar {
+    font-size: 35px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    height: 35px;
+    width: 24px;
+    color: gray;
+
+  }
+  
+.home__body {
+    flex: 1;
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+}
+
+
+.home__body > img {
+      object-fit: contain;
+      height: 100px;
+}

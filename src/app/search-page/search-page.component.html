@@ -1,0 +1,111 @@
+<div class="searchPage">
+    <div class="searchPage__header">
+        <a [routerLink]="['/home']" >
+            <img class="searchPage__logo" src="../../assets/mednour.PNG"/>
+        </a>
+        <div class="searchPage__headerBody">
+            <app-search (searchValue)="onSearchEvent($event)"  [search]="searchValue1"  ></app-search>
+            <div class="searchPage__options">
+                <div class="searchPage__optionsLeft">
+                    <mat-button-toggle-group value="All" #group="matButtonToggleGroup" [value]="extension" (change)="onValChange(group.value)">
+                    <div class="searchPage__option">
+                        <mat-button-toggle mat-button value="All">
+                            <mat-icon  aria-hidden="false" >search</mat-icon>
+                            All
+                        </mat-button-toggle> 
+                    </div>
+                    <div class="searchPage__option">
+                        <mat-button-toggle mat-button value="PDF">
+                            <mat-icon  aria-hidden="false" >picture_as_pdf</mat-icon>
+                            PDF
+                        </mat-button-toggle>
+                    </div>
+                    <div class="searchPage__option">
+                        <mat-button-toggle mat-button value="DOC">
+                            <mat-icon  aria-hidden="false" >description</mat-icon>
+                            DOC
+                        </mat-button-toggle>
+                    </div>
+                    <div class="searchPage__option">
+                        <mat-button-toggle mat-button value="CSV">
+                            <mat-icon  aria-hidden="false" >analytics</mat-icon>
+                            CSV
+                        </mat-button-toggle>
+                        
+                    </div>
+                </mat-button-toggle-group>
+
+                </div>
+                <div class="searchPage__optionsRight">
+                    <!-- <div class="searchPage__option">
+                        <button mat-button  (click)="onSortSize(SizeIconStatus)">
+                            Size
+                        <mat-icon  aria-hidden="false" >{{SizeIconStatus}}</mat-icon>
+                        </button>
+                        
+                        
+                    </div>
+                    <div class="searchPage__option">
+
+                        <button mat-button (click)="onSortDate(DateIconStatus)">
+                            Date
+                        <mat-icon  aria-hidden="false" >{{DateIconStatus}}</mat-icon>
+                        </button>
+                    </div>  -->
+                </div>
+                
+
+
+            </div>
+        </div>
+        <div class="home__headerRight">
+            <a routerLink="/upload">Upload</a>
+            <mat-icon aria-hidden="false" >apps</mat-icon>
+            <button mat-button [matMenuTriggerFor]="menu">
+                <mat-icon class="avatar" aria-hidden="false" >account_circle</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Disconnect</button>
+                </mat-menu>
+            <!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+            <mat-menu #menu="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+            </mat-menu> -->
+
+            <!-- <mat-icon class="avatar" aria-hidden="false" >account_circle</mat-icon> -->
+                        
+        </div>
+    </div>
+    
+    <div class="searchPage__results">
+        <p class="searchPage__resultCount">
+            About {{size}} Documents results 
+        </p>
+
+        <div  class="searchPage__result" *ngFor="let docc of docs">
+            <a class="searchPage__resultTitle">
+                <h2>{{docc.title}}</h2>
+            </a>
+            <p class="searchPage__resultContent">{{docc.content}}</p>
+            <div class="searchPage__resultAuthor" >
+            <p class="searchPage__resultAuthor">Author : {{docc.author}}</p>
+            <p>Date: {{docc.date | date }} </p>
+            <p>Extension: {{docc.extension}}</p>
+            <p>File Size: {{docc.filesize/1024/1024 |number }} MB</p>
+            
+
+
+            
+            <button mat-flat-button (click)="onDownload(docc.id,docc.fileName,docc.extesion)" color="primary" type="submit" class="searchPage__resultButton">
+                <mat-icon  aria-hidden="false" >get_app</mat-icon>
+                Download
+            </button>
+        
+
+        </div>
+        </div>
+        
+    </div>
+</div>

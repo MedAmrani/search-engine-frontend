@@ -1,0 +1,11 @@
+<form class="search">
+    <div class="search__input">
+        <mat-icon class="search__inputIcon" aria-hidden="false" >search</mat-icon>
+        <input [(ngModel)]="search" name="searchInput"/>
+        <!-- <mat-icon aria-hidden="false" >mic</mat-icon> -->
+    </div>
+    <div [hidden]="!this.isButtonVisible" class="search__buttons">
+        <button type="submit" (click)="onSearch()" mat-flat-button class="search__button" >Doc Search</button>
+
+    </div>
+</form>

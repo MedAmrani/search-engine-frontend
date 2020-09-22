@@ -1,0 +1,152 @@
+
+.searchPage__header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    align-items: flex-start;
+    padding: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgray;
+    
+    
+
+    
+}
+
+
+.searchPage__logo {
+    object-fit: contain;
+    height: 50px;
+    margin-right: 50px;
+}
+
+.searchPage__headerBody ::ng-deep .search > .search__input {
+    margin-top: 0;
+    width: unset;
+    margin: unset;
+    max-width: unset;
+} 
+
+.searchPage__options {
+    display: flex;
+    align-items: center;
+    color: grey;
+    width: 650px;
+}
+
+.searchPage__options a, .searchPage__optionsRight a {
+    text-decoration: none;
+    color: gray;
+}
+
+.searchPage__optionsRight, .searchPage__optionsLeft {
+    display: flex;
+}
+
+.searchPage__optionsRight {
+    margin-left: 100px;
+}
+
+.searchPage__option {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.searchPage__option a {
+    margin-left: 5px;
+}
+
+.searchPage__result {
+    margin: 40px 0;
+    // border-bottom: solid gray;
+}
+
+.searchPage__resultCount {
+    color: #70757a;
+    font-size: 14px;
+
+}
+
+.searchPage__results {
+    max-width: 800px;
+    margin-top: 20px;
+    margin-left: 240px;
+    margin-bottom: 100px;
+}
+
+.searchPage__resultTitle{
+    text-decoration: none;
+}
+
+.searchPage__resultTitle:hover {
+    text-decoration: underline;
+}
+
+.searchPage__resultTitle > h2 {
+    font-weight: 500px;
+}
+
+.searchPage__resultContent{
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5; 
+    margin-bottom: 5px; 
+}
+
+.searchPage__resultAuthor{
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.searchPage__resultAuthor {
+    display:flex;
+    justify-content:space-between;
+    align-items: flex-end;
+
+    
+}
+mat-button-toggle-group{
+    border: hidden;
+}
+
+.home__headerRight {
+    display: flex;
+    align-items: center;
+    min-width: 13vw;
+    justify-content: space-between;
+    margin-left: 300px;
+    margin-top: -10px;
+}
+
+.home__headerRight > .mat-icon {
+    margin-right: 20px;
+}
+
+.avatar {
+    font-size: 35px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    height: 35px;
+    width: 24px;
+    color: gray;
+
+  }
+
+.home__headerRight a {
+    margin-right: 20px;
+    text-decoration: inherit;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 15px;
+}
+.home__headerRight a:hover {
+    text-decoration: underline;
+}
