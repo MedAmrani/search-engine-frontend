@@ -2,6 +2,7 @@
 .searchPage__header {
     display: flex;
     position: sticky;
+    justify-content: space-between;
     top: 0;
     background-color: white;
     z-index: 100;
