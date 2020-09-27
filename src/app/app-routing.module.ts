@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { SearchPageTestComponent } from './search-page-test/search-page-test.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { UploadPageComponent } from './upload-page/upload-page.component';
 
@@ -17,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'search',
-    component: SearchPageComponent,
+    component: SearchPageTestComponent,
 
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' }

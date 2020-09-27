@@ -6,11 +6,12 @@ import { SearchService } from '../services/search.service';
 import * as fileSaver from 'file-saver';
 
 @Component({
-  selector: 'app-search-page',
-  templateUrl: './search-page.component.html',
-  styleUrls: ['./search-page.component.scss']
+  selector: 'app-search-page-test',
+  templateUrl: './search-page-test.component.html',
+  styleUrls: ['./search-page-test.component.scss']
 })
-export class SearchPageComponent implements OnInit {
+export class SearchPageTestComponent implements OnInit {
+
   searchValue1:string = "";
   SizeIconStatus: string = "arrow_upward";
   DateIconStatus: string = "arrow_upward";
@@ -59,12 +60,14 @@ export class SearchPageComponent implements OnInit {
       this.extension = "docx";
     }
     // console.log(val)
-    this.docSearchRequest = {
-      q: this.searchValue1,
-      extension: this.extension,
-      sortByDate: this.sortByDate,
-      sortbySize: this.sortbySize
-    }
+    // this.docSearchRequest = {
+    //    q: this.searchValue1,
+    //   extension: this.extension,
+    //   sortByDate: this.sortByDate,
+    //   sortbySize: this.sortbySize
+    // }
+
+    this.docSearchRequest.extension = this.extension;
     this.searcheService.getAllDocsMatchCriteria(this.docSearchRequest,{page: 0, size:10}).subscribe({
       next: (data:any) => {this.docs = data, this.size = data.length , this.onSearchEvent(this.searchValue1);
       }
@@ -74,6 +77,7 @@ export class SearchPageComponent implements OnInit {
   onSearchEvent(request){
     // console.log(this.docs);
     console.log(request,"searchevent",this.extension);
+    this.searchValue1 = request;
 
     let data = {
       q: request,
@@ -127,3 +131,4 @@ export class SearchPageComponent implements OnInit {
   }
 
 }
+

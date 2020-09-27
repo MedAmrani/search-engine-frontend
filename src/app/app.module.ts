@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UploadPageComponent } from './upload-page/upload-page.component';
 import { DndDirective } from './dnd.directive';
 import {FileUploadModule} from 'ng2-file-upload';
+import { SearchPageTestComponent } from './search-page-test/search-page-test.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {FileUploadModule} from 'ng2-file-upload';
     SearchPageComponent,
     SearchComponent,
     UploadPageComponent,
-    DndDirective
+    DndDirective,
+    SearchPageTestComponent
 
   ],
   imports: [

@@ -17,7 +17,7 @@ export class SearchComponent implements OnInit {
 
   onSearch(){
     this.searchValue.emit(this.search);
-    console.log(this.search)
+    // console.log(this.search)
   }
 
 }
